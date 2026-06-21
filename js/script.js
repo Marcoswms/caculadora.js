@@ -2,19 +2,20 @@ function calculate() {
 
     const value1 = Number(document.getElementById("value1").value);
     const value2 = Number(document.getElementById("value2").value);
-    const operation = document.getElementById("operation").value;
+    const operation = document.querySelector('input[name="operation"]:checked')?.value;
     let result;
+
     switch (operation) {
-        case "+":
+        case "addition":
             result = value1 + value2;
             break;
-        case "-":
+        case "subtraction":
             result = value1 - value2;
             break;
-        case "*":
+        case "multiplication":
             result = value1 * value2;
             break;
-        case "/":
+        case "division":
             result = value1 / value2;
             break;
         default: return document.getElementById("result").innerText =

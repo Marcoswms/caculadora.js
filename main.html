@@ -1,31 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
-</head>
-<body>
+
+    <link rel="stylesheet" href="bootstrap/v-5.3.8/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css?v=1" />
+  </head>
+  <body>
 
     <div class="text-title">
-        <h1>Calculadora</h1>
+      <h1>Calculadora</h1>
     </div>
 
     <div class="container">
-        <h2>Primeiro valor</h2>
-        <input type="number" id="value1" placeholder="valor 01">
+      <h2>Primeiro valor</h2>
+      <input type="number" id="value1" placeholder="valor 01" />
 
-        <h2>Operação: +  -  *  /</h2>
-        <input type="text" id="operation" placeholder=" + - * / ">
-        
-        <h2>Segundo valor</h2>
-        <input type="number" id="value2" placeholder="valor 02">
-        
-        <button onclick="calculate()">Calcular</button>
+      <h3>Operação:</h3>
+      <div class="form-check-custom">
+        <input type="radio" name="operation" id="addition" value="addition"/>
+        <label for="addition">+ (Adição)</label>    
+      </div>
 
-        <p id="result"></p>
+      <div class="form-check-custom">
+        <input type="radio" name="operation" id="subtraction" value="subtraction"/>
+        <label for="subtraction">- (Subtração)</label>
+      </div>
+
+      <div class="form-check-custom">
+        <input type="radio" name="operation" id="multiplication" value="multiplication"/>
+        <label for="multiplication">* (Multiplicação)</label>
+      </div>
+
+      <div class="form-check-custom">
+        <input type="radio" name="operation" id="division" value="division"/>
+        <label for="division">/ (Divisão)</label>
+      </div>
+
+      <h2>Segundo valor</h2>
+      <input type="number" id="value2" placeholder="valor 02" />
+
+      <button onclick="calculate()">Calcular</button>
+
+      <p id="result"></p>
     </div>
-    
+
+    <script src="bootstrap/v-5.3.8/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

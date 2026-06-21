@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  border: 8px ridge;
+  border-color: rgb(206, 223, 247);
+  padding: 20px; 
+}
+
+
