@@ -15,36 +15,49 @@
     </div>
 
     <div class="container">
-      <h2>Primeiro valor</h2>
-      <input type="number" id="value1" placeholder="valor 01" />
-
-      <h3>Operação:</h3>
-      <div class="form-check-custom">
-        <input type="radio" name="operation" id="addition" value="addition"/>
-        <label for="addition">+ (Adição)</label>    
+      
+      <div class="mb-3">
+        <label class="form-label"><h3>Primeiro valor</h3></label>
+        <input type="number" class="form-control" id="value1" placeholder="número">
       </div>
 
-      <div class="form-check-custom">
-        <input type="radio" name="operation" id="subtraction" value="subtraction"/>
-        <label for="subtraction">- (Subtração)</label>
+      <h3>Operação</h3>
+      <div class="container-op">
+        
+        <div class="form-check">
+            <input type="radio" name="operation" id="addition" value="addition"/>
+            <label for="addition">+ (Adição)</label>    
+        </div>
+
+        <div class="form-check">
+            <input type="radio" name="operation" id="subtraction" value="subtraction"/>
+            <label for="subtraction">- (Subtração)</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" name="operation" id="multiplication" value="multiplication"/>
+            <label for="multiplication">* (Multiplicação)</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" name="operation" id="division" value="division"/>
+            <label for="division">/ (Divisão)</label>
+        </div>
       </div>
 
-      <div class="form-check-custom">
-        <input type="radio" name="operation" id="multiplication" value="multiplication"/>
-        <label for="multiplication">* (Multiplicação)</label>
+      <div class="mb-3">
+        <label class="form-label"><h3>Segundo valor</h3></label>
+        <input type="number" class="form-control" id="value2" placeholder="número">
+      </div>
+      
+      <button type="button" onclick="calculate()" class="btn btn-outline-pink">Calcular</button>
+
+      <div class="card" id="resultCard" style="display: none;">
+        <div class="card-body">
+            <p id="result"></p>
+        </div>
       </div>
 
-      <div class="form-check-custom">
-        <input type="radio" name="operation" id="division" value="division"/>
-        <label for="division">/ (Divisão)</label>
-      </div>
-
-      <h2>Segundo valor</h2>
-      <input type="number" id="value2" placeholder="valor 02" />
-
-      <button onclick="calculate()">Calcular</button>
-
-      <p id="result"></p>
     </div>
 
     <script src="bootstrap/v-5.3.8/js/bootstrap.bundle.min.js"></script>

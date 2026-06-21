@@ -18,9 +18,12 @@ function calculate() {
         case "division":
             result = value1 / value2;
             break;
-        default: return document.getElementById("result").innerText =
-            "Formato de operação informado é inválido!";
+        default: result = "Formato de operação informado é inválido!";                       
     }
-    document.getElementById("result").innerText =
-        "Resultado: " + result;
+    getResult("Resultado: " + result);
+}
+
+function getResult(message) {
+    document.getElementById("resultCard").style.display = "block";
+    document.getElementById("result").innerText = message;
 }
